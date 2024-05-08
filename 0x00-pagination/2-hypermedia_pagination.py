@@ -55,7 +55,6 @@ class Server:
         except IndexError as e:
             return []
 
-
     def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict[str, Any]:
         """
         Implement a get_hyper method that takes the same
@@ -88,7 +87,6 @@ class Server:
         output_dict['total_pages'] = total_pages
 
         return output_dict
-
 
 
 def index_range(page: int, page_size: int) -> tuple:
