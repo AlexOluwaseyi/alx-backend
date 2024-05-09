@@ -31,8 +31,7 @@ class FIFOCache(BaseCaching):
     Implements puts and get method
     """
     def __init__(self):
-        # super().__init__()
-        self.cache_data = {}
+        super().__init__()
 
     def put(self, key, item):
         """
