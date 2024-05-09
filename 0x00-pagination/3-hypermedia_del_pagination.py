@@ -76,5 +76,9 @@ class Server:
         for key, value in indexed_data.items():
             if index <= key < index + page_size:
                 output_dict['data'].append(value)
+                continue
+            if len(output_dict['data']) != page_size:
+                output_dict['data'].append(indexed_data[key + 1])
+                break
 
         return output_dict
