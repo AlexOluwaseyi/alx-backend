@@ -45,7 +45,6 @@ class FIFOCache(BaseCaching):
                 - you must print DISCARD: with the key discarded
                 and following by a new line
         """
-        # print(f'Current dict: {self.cache_data}')
         if key is not None and item is not None:
             if len(self.cache_data) == BaseCaching.MAX_ITEMS:
                 for keys in self.cache_data.keys():
