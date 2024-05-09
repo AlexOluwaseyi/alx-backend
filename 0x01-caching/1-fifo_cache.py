@@ -66,4 +66,3 @@ class FIFOCache(BaseCaching):
             return self.cache_data[key]
         except KeyError:
             return None
-
