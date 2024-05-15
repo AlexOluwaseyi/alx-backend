@@ -5,7 +5,7 @@ Flask module for i18n and probably L10n
 """
 
 from flask import Flask, render_template, request
-from flask_babel import Babel, _
+from flask_babel import Babel
 
 
 class Config:
@@ -20,7 +20,7 @@ app.config.from_object(Config)
 babel = Babel(app)
 
 
-# @babel.locale_selector
+@babel.localeselector
 def get_locale():
     """Get locale from request header"""
     return request.accept_languages.best_match(app.config['LANGUAGES'])
