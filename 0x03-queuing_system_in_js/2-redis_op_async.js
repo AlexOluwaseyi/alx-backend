@@ -24,3 +24,7 @@ client.on('connect', async () => {
   console.log('Redis client connected to the server');
   await main();
 });
+
+displaySchoolValue('Holberton');
+setNewSchool('HolbertonSanFrancisco', '100');
+displaySchoolValue('HolbertonSanFrancisco');
